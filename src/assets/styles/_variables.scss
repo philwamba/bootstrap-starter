@@ -1,0 +1,20 @@
+// Define the theme colors (if not already defined)
+$theme-colors: (
+  primary: #007bff,
+  secondary: #6c757d,
+  success: #28a745,
+  danger: #dc3545,
+  warning: #ffc107,
+  info: #17a2b8,
+  light: #f8f9fa,
+  dark: #343a40
+);
+
+// Create the $utilities-border-colors map
+$utilities-border-colors: ();
+@each $color-name, $color-value in $theme-colors {
+  $utilities-border-colors: map-merge(
+    $utilities-border-colors,
+    ($color-name: $color-value)
+  );
+}
